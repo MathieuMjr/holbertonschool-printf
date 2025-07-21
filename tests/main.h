@@ -5,6 +5,6 @@
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
-int _strlen(char *s);
+int _strlen(const char *s);
 
 #endif
