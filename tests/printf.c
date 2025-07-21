@@ -11,5 +11,7 @@
  */
 int _printf(const char *format, ...)
 {
-	return ();
+	write(1, format, _strlen(format));
+
+	return (_strlen(format));
 }
