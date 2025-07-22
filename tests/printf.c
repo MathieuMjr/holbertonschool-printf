@@ -11,7 +11,18 @@
  */
 int _printf(const char *format, ...)
 {
-	write(1, format, _strlen(format));
+	unsigned int i = 0;
 
-	return (_strlen(format));
+	while (format != NULL && format[i] != '\0')
+	{
+		_putchar(format[i]);
+		++i;
+	}
+	printf("%d\n", i);
+	if (i != 0) 
+	/*if empty string is passed, -1 must not be returned*/
+	{
+		return (i - 1); 
+	}
+	return(0);
 }
