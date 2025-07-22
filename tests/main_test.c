@@ -17,5 +17,6 @@ int main(void)
 	printf("50%% offerts pour 3 %s achetés de taille %c.\n", "pantalons", 'S');
 	_printf("Je veux prouver que je peux utiliser plein d'arguments ! %c %s %s %c %s %c\n", 'S', "chemises", "pantalons", 'L', "jupes", 'M');
 	printf("Je veux prouver que je peux utiliser plein d'arguments ! %c %s %s %c %s %c\n", 'S', "chemises", "pantalons", 'L', "jupes", 'M');
+	_printf("Hello, %c", 'V');
 	return(0);
 }

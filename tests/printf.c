@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 
 	int i = 0;
 	int j = 0;
+	int count = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -33,6 +34,7 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == data[j].letter[0])
 				{
 					data[j].f(args);
+					count += 1;
 					i += 2;
 					break;
 				}
@@ -45,10 +47,13 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[i]);
+			count = count + 1;
 			++i;
 		}
 	}
+	printf("%d\n",count);
+	va_end(args);
 	if (i != 0)
-		return (i - 1);
+		return (count);
 	return (0);
 }
