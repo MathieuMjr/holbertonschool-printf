@@ -11,18 +11,44 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0;
+	type_t data[] = {
+		{"c", print_char},
+		{"s", print_string},
+		{"%", print_percent},
+		{NULL, NULL},
+	};
 
+	int i = 0;
+	int j = 0;
+	va_list args;
+
+	va_start(args, format);
 	while (format != NULL && format[i] != '\0')
 	{
-		_putchar(format[i]);
-		++i;
+		if (format[i] == '%')
+		{
+			j = 0;
+			while (data[j].letter != NULL)
+			{
+				if (format[i + 1] == data[j].letter[0])
+				{
+					data[j].f(args);
+					i += 2;
+					break;
+				}
+				else
+				{
+					++j;
+				}
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			++i;
+		}
 	}
-	printf("%d\n", i);
-	if (i != 0) 
-	/*if empty string is passed, -1 must not be returned*/
-	{
-		return (i - 1); 
-	}
-	return(0);
+	if (i != 0)
+		return (i - 1);
+	return (0);
 }
