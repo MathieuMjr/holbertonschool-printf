@@ -32,11 +32,10 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == data[j].letter[0])
 				{
 					data[j].f(args, &count);
-					i += 2;
-					break;
 				}
 				++j;
 			}
+			i += 2;
 		}
 		else
 		{
@@ -46,10 +45,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-	/*printf("%d\n", count);*/
-	if (i == 0)
-	{
-		return(-1);
-	}
 	return (count);
 }
