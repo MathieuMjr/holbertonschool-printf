@@ -55,6 +55,13 @@ void print_percent(va_list args, int *count)
 	*count += 1;
 }
 
+/**
+ * print_int - function that print an int
+ * @args: int given as undefined arg from
+ * variadic function
+ * @count: adress to the counter in order to increase it
+ * by one each time something is printed
+ */
 void print_int(va_list args, int *count)
 {
 	int n = va_arg(args, int);
