@@ -18,9 +18,7 @@ int _printf(const char *format, ...)
 		{NULL, NULL},
 	};
 
-	int i = 0;
-	int j = 0;
-	int count = 0;
+	int i = 0, j = 0, count = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -35,14 +33,10 @@ int _printf(const char *format, ...)
 				{
 					data[j].f(args);
 					count += 1;
-					i += 2;
-					break;
 				}
-				else
-				{
-					++j;
-				}
+				++j;
 			}
+			i += 2;
 		}
 		else
 		{
@@ -51,9 +45,6 @@ int _printf(const char *format, ...)
 			++i;
 		}
 	}
-	printf("%d\n",count);
 	va_end(args);
-	if (i != 0)
-		return (count);
-	return (0);
+	return (count);
 }
