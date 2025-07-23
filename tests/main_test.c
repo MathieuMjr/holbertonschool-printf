@@ -3,12 +3,18 @@
 
 int main(void)
 {
-	/*_printf("Hello, %s.\n", "Vincent");
+	/*int len;
+	int len2;*/
+
+	_printf("Hello, %s.\n", "Vincent");
 	printf("Vérification Hello Vincent : ");
 	printf("Hello, %s.\n", "Vincent");
-	_printf(NULL);
+	/*len = _printf(NULL);
 	printf("Vérification pour NULL : ");
-	printf(NULL);
+	len2 = printf(NULL);
+
+	printf("Len : %d\n", len);
+	printf("Len2 : %d\n", len2);*/
 	_printf("Promotion de 20 %% sur les %s.\n","chemises");
 	printf("Vérification Promotion :");
 	printf("Promotion de 20 %% sur les %s\n","chemises");
@@ -18,7 +24,16 @@ int main(void)
 	_printf("Je veux prouver que je peux utiliser plein d'arguments ! %c %s %s %c %s %c\n", 'S', "chemises", "pantalons", 'L', "jupes", 'M');
 	printf("Je veux prouver que je peux utiliser plein d'arguments ! %c %s %s %c %s %c\n", 'S', "chemises", "pantalons", 'L', "jupes", 'M');
 	_printf("Hello, %c\n", 'V');
-	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);*/
-	_printf("%");
+	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	/*len = _printf("%");
+	printf("Vérification pour % : ");
+	len2 = printf("%");
+	printf("Len : %d\n", len);
+	printf("Len2 : %d\n", len2);*/
+	/*_printf("%");
+	_printf("ttttttt%");
+	_printf("3%tttt");
+	_printf("Unknown:[%r]\n");*/
+
 	return(0);
 }
