@@ -54,3 +54,21 @@ void print_percent(va_list args, int *count)
 	_putchar('%');
 	*count += 1;
 }
+
+/*void print_int(va_list args, int *count)
+{
+	int n = va_arg(args, int);
+	int i = 0;
+	int m = n;
+	int j;
+
+	while (m /10 != 0)
+	{
+		m = m / 10;
+		++i;
+	}
+
+	for (j = i; j > 0; --i)
+
+
+}*/
