@@ -31,8 +31,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == data[j].letter[0])
 				{
-					data[j].f(args);
-					count += 1;
+					data[j].f(args, &count);
 				}
 				++j;
 			}
