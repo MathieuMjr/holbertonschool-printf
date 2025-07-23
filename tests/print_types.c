@@ -55,6 +55,13 @@ void print_percent(va_list args, int *count)
 	*count += 1;
 }
 
+/**
+ * print_int - function that print an int
+ * @args: int given as undefined arg from
+ * variadic function
+ * @count: adress to the counter in order to increase it
+ * by one each time something is printed
+ */
 void print_int(va_list args, int *count)
 {
 	int n = va_arg(args, int);
@@ -73,18 +80,18 @@ void print_int(va_list args, int *count)
 		absnb = n;
 	}
 	nblen = absnb;
-	while (nblen /10 != 0)
-		{
-			nblen = nblen / 10;
-			++i;
-		}
+	while (nblen / 10 != 0)
+	{
+		nblen = nblen / 10;
+		++i;
+	}
 		/* la boucle tourne longueur du nombre -1 */
 
 		for (; i >= 0; --i)
 		{
 			_putchar('0' + (absnb / _pow_recursion(10, i)) % 10);
-			/*avoir le 1er chiffre = 
-			(nombre / 10^(longueur-1)) % 10 */
+			/*avoir le 1er chiffre = */
+			/*(nombre / 10^(longueur-1)) % 10 */
 			*count += 1;
 		}
 }
