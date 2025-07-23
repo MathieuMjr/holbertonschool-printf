@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 						return (count);
 					}
 					i += 2;
-					break;
+					continue;
 				}
 				++j;
 			}
