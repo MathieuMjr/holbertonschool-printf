@@ -41,18 +41,13 @@ int _printf(const char *format, ...)
 					if (format[i + 2] == '\0')
 					{
 						va_end(args);
-						return (count);
-					}
+						return (count); }
 					i += 2;
-					break;
-				}
-				++j;
-			}
-		}
+					break; }
+				++j; } }
 		_putchar(format[i]);
 		count = count + 1;
-		++i;
-	}
+		++i; }
 	va_end(args);
 	return (count);
 }
