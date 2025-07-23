@@ -18,9 +18,7 @@ int _printf(const char *format, ...)
 		{NULL, NULL},
 	};
 
-	int i = 0;
-	int j = 0;
-	int count = 0;
+	int i = 0, j = 0, count = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -33,16 +31,11 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == data[j].letter[0])
 				{
-					data[j].f(args);
-					count += 1;
-					i += 2;
-					break;
+					data[j].f(args, &count);
 				}
-				else
-				{
-					++j;
-				}
+				++j;
 			}
+			i += 2;
 		}
 		else
 		{
@@ -52,7 +45,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-	if (i != 0)
-		return (count);
-	return (0);
+	return (count);
 }
