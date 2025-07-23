@@ -3,12 +3,12 @@
 
 int main(void)
 {
-	_printf("Hello, %s.\n", "Vincent");
+	/*_printf("Hello, %s.\n", "Vincent");
 	printf("Vérification Hello Vincent : ");
 	printf("Hello, %s.\n", "Vincent");
-	/*_printf(NULL);
+	_printf(NULL);
 	printf("Vérification pour NULL : ");
-	printf(NULL);*/
+	printf(NULL);
 	_printf("Promotion de 20 %% sur les %s.\n","chemises");
 	printf("Vérification Promotion :");
 	printf("Promotion de 20 %% sur les %s\n","chemises");
@@ -18,5 +18,7 @@ int main(void)
 	_printf("Je veux prouver que je peux utiliser plein d'arguments ! %c %s %s %c %s %c\n", 'S', "chemises", "pantalons", 'L', "jupes", 'M');
 	printf("Je veux prouver que je peux utiliser plein d'arguments ! %c %s %s %c %s %c\n", 'S', "chemises", "pantalons", 'L', "jupes", 'M');
 	_printf("Hello, %c\n", 'V');
+	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);*/
+	_printf("%");
 	return(0);
 }

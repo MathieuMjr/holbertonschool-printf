@@ -26,6 +26,13 @@ void print_string(va_list args, int *count)
 	const char *s = va_arg(args, char*);
 	int i = 0;
 
+	if (s == NULL)
+	{
+		write(1, "(null)", 6);
+		*count += 6;
+		return;
+	}
+
 	while (s[i] != '\0')
 	{
 		_putchar(s[i]);
