@@ -23,28 +23,30 @@ int _printf(const char *format, ...)
 	int i = 0, j = 0, count = 0;
 	va_list args;
 
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				return (-1);
 			j = 0;
 			while (data[j].letter != NULL)
 			{
 				if (format[i + 1] == data[j].letter[0])
 				{
 					data[j].f(args, &count);
+					i += 2;
+					break;
 				}
 				++j;
 			}
-			i += 2;
 		}
-		else
-		{
 			_putchar(format[i]);
 			count = count + 1;
 			++i;
-		}
 	}
 	va_end(args);
 	return (count);

@@ -30,10 +30,9 @@ int main(void)
 	len2 = printf("%");
 	printf("Len : %d\n", len);
 	printf("Len2 : %d\n", len2);*/
-	/*_printf("%");
-	_printf("ttttttt%");
+	_printf("%");
 	_printf("3%tttt");
-	_printf("Unknown:[%r]\n");*/
+	_printf("Unknown:[%r]\n");
 	_printf("%d\n", -456);
 
 	return(0);
