@@ -3,12 +3,17 @@
 
 int main(void)
 {
-	/*int len;
-	int len2;*/
+	int len;
+	int len2;
 
+	len = _printf("%c", 'V');
+	len2 = printf("%c", 'V');
+	printf("\nValeur de len : %d\n", len);
+	printf("Valeur de Len2 : %d\n", len2);
+	/*_printf("\n");
 	_printf("Hello, %s.\n", "Vincent");
 	printf("Vérification Hello Vincent : ");
-	printf("Hello, %s.\n", "Vincent");
+	printf("Hello, %s.\n", "Vincent");*/
 	/*len = _printf(NULL);
 	printf("Vérification pour NULL : ");
 	len2 = printf(NULL);
