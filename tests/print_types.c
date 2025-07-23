@@ -59,26 +59,30 @@ void print_int(va_list args, int *count)
 {
 	int n = va_arg(args, int);
 	int i = 0;
-	int m;
-	int j;
+	unsigned int absnb;
+	int nblen;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		absnb = -((unsigned int) n);
 		*count += 1;
 	}
-		m = n;	
-	while (m /10 != 0)
+	else
+	{
+		absnb = n;
+	}
+	nblen = absnb;
+	while (nblen /10 != 0)
 		{
-			m = m / 10;
+			nblen = nblen / 10;
 			++i;
 		}
 		/* la boucle tourne longueur du nombre -1 */
 
-		for (j = i; j >= 0; --j)
+		for (; i >= 0; --i)
 		{
-			_putchar('0' + (n / _pow_recursion(10, j)) % 10);
+			_putchar('0' + (absnb / _pow_recursion(10, i)) % 10);
 			/*avoir le 1er chiffre = 
 			(nombre / 10^(longueur-1)) % 10 */
 			*count += 1;
