@@ -34,7 +34,7 @@ int main(void)
 	_printf("ttttttt%");
 	_printf("3%tttt");
 	_printf("Unknown:[%r]\n");*/
-	_printf("%d\n", 295);
+	_printf("%d\n", 0);
 
 	return(0);
 }
