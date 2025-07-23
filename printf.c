@@ -38,15 +38,20 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == data[j].letter[0])
 				{
 					data[j].f(args, &count);
+					if (format[i + 2] == '\0')
+					{
+						va_end(args);
+						return (count);
+					}
 					i += 2;
 					break;
 				}
 				++j;
 			}
 		}
-			_putchar(format[i]);
-			count = count + 1;
-			++i;
+		_putchar(format[i]);
+		count = count + 1;
+		++i;
 	}
 	va_end(args);
 	return (count);
