@@ -23,31 +23,32 @@ int _printf(const char *format, ...)
 	int i = 0, j = 0, count = 0;
 	va_list args;
 
-	if (format == NULL)
-		return (-1);
 	va_start(args, format);
-	while (format != NULL && format[i] != '\0')
+	if (format != NULL && !(format[0] == '%' && format[1] == '\0'))
 	{
-		if (format[i] == '%')
+		while (format[i] != '\0')
 		{
-			if (format[i + 1] == '\0')
-				return (-1);
-			j = 0;
-			while (data[j].letter != NULL)
+			if (format[i] == '%' && (is_known(format[i + 1]) == 0))
 			{
-				if (format[i + 1] == data[j].letter[0])
+				j = 0;
+				while (data[j].letter != NULL)
 				{
-					data[j].f(args, &count);
-					if (format[i + 2] == '\0')
+					if (format[i + 1] == data[j].letter[0])
 					{
-						va_end(args);
-						return (count); }
-					i += 2;
-					break; }
-				++j; } }
-		_putchar(format[i]);
-		count = count + 1;
-		++i; }
+						data[j].f(args, &count);
+						i += 2;
+						break; }
+					++j; }
+				}
+			else
+			{
+				_putchar(format[i]);
+				count += 1;
+				i += 1; }
+		}
+		va_end(args);
+		return (count);
+	}
 	va_end(args);
-	return (count);
+	return (-1);
 }
