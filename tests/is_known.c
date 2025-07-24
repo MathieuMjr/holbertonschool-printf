@@ -9,7 +9,6 @@ int is_known (char c)
 	{
 		++i;
 	}
-	printf("Valeur de i : %d\n", i);
 	if (i <= 4)
 	{
 		return(0);
