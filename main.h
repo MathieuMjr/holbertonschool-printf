@@ -26,6 +26,6 @@ void print_percent(va_list args, int *count);
 void print_char(va_list args, int *count);
 void print_int(va_list args, int *count);
 int _pow_recursion(int x, int y);
-int is_known (char c);
+int is_known(char c);
 
 #endif
