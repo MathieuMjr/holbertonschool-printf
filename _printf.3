@@ -11,11 +11,11 @@ _printf
 int _printf(const char *format,...);
 
 .SH "DESCRIPTION"
-_printf writes a string of chars and any other variadic arguments on the standard output.
+_printf writes a string of characters and variadic arguments on the standard output.
 .PP
-Variadic arguments can be different types : int, char, char*. Doubles and floats are not supported yet.
+Variadic arguments can be different types : int, char, strings (char*). Doubles and floats are not supported yet.
 .PP
-_printf function should print each variadic argument according to the type it is.
+_printf function should print each variadic argument according to its type.
 .PP
 The type of variadic arguments passed to _printf function should be mentioned with a 
 .B
@@ -44,26 +44,26 @@ is used to format a character. "c" stands for "character".
 is used to format a string of characters. "s" stands for "string".
 .br
 .B %i or %d
-are used to format and integer. "i" stands for "integer" and "d" stands for "decimal".
+are used to format an integer. "i" stands for "integer" and "d" stands for "decimal".
 
 .B Notes about specifiers :
 
-If "%" is the only char given to the function. It should not print and return -1 value.
+If "%" is the only character given to the function. It should not print and return -1 value.
 .br
-If "%" is followed by "%", function should write only one "%". 
+If "%" is followed by "%", function should print only one "%". 
 .br
 If "%" is followed by an 
 .B unknown specifier
-, function should print "%" and the unknown specifier as characters.
+, function should print "%" and the following character.
 
 .SH "RETURN VALUE"
-If _printf succeed, it returns the number of characters printed, null bytes excluded.
+If _printf succeeds, it returns the number of characters printed, null bytes excluded.
 If empty string is given, _printf should return (0).
 
 If _printf 
 .B 
-returns -1 value, 
-it means :q
+returns -1, 
+it means :
 .br
 1/ const char* format is null
 .br
@@ -72,8 +72,8 @@ it means :q
 .SH "AUTHOR(S)"
 ---
 .br
-Mathieu Majérus
+Mathieu Majérus - wrote the code, manpage, readme, flowchart
 .br
 ---
 .br
-Maxime Regnier
+Maxime Regnier - contributed to the flowchart
