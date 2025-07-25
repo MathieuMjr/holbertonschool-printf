@@ -21,11 +21,9 @@ It gives you the prototype of the function, it's returns, what are the specifier
 
 ### Flowchart
 
-The following flowchart explains how the function works. It's written in an understable way.
+[The following flowchart explains how the function works. It's written in an understable way.](Flowchart/printf%20v3.drawio.png)
 
-## Examples
-
-Here are some exemples :
+<img src = "Flowchart/printf%20v3.drawio.png">
 
 > printf("Hello !\n");\
 > printf("Hello %s !\n", "Vincent");\
