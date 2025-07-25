@@ -9,7 +9,7 @@
  */
 void print_char(va_list args, int *count)
 {
-	_putchar((char) va_arg(args, int));
+	_putchar(va_arg(args, int));
 	/*‘char’ is promoted to ‘int’ when passed through ‘...’*/
 	*count += 1;
 }
