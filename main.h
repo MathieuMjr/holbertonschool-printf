@@ -7,7 +7,7 @@
 
 /**
  * struct type - associates a format specifier letter with a function
- * to print an argument of that type.
+ * to print a variadic argument of that type.
  *
  * @letter: format specifier character as a string.
  * @f: pointer to a function that prints an argument of the given type.
