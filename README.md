@@ -75,4 +75,3 @@ main_test.c evolved according to different steps of development - even though th
 ## Authors
 
 **Mathieu Majérus** - wrote code, manpage, readme.md, flowchart\
-**Maxime Regnier** - contributed to flowchart
